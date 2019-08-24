@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+#content {
+  width: 100%;
+  height: calc(100vh - 52px); 
+}
+/**********bottomMenu**********/
+
+#bottomMenu {
+  height: 52px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.bottomMenuBtn {
+  display: block;
+  width: 50%;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-weight: bold;
+  background: #ffffff;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+/******************************/
+
+/**********Topics**********/
+.topicsList {
+  width: 100%;
+  height: 100%;
+  padding: 25px 25px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.topicsList::-webkit-scrollbar {
+  width: 0;
+}
+
+.topic {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.topic:first-child {
+  margin: 0 0 10px 0;
+}
+
+.topic:last-child {
+  margin: 10px 0 0 0;
+}
+
+/**************************/
+
+/**********Levels**********/
+.listOfLevels {
+  width: 100%;
+  height: 100%;
+  padding: 25px 25px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.listOfLevels::-webkit-scrollbar {
+  width: 0;
+}
+
+.level {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  margin: 10px 0;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.level:first-child {
+  margin: 0 0 10px 0;
+}
+
+.level:last-child {
+  margin: 10px 0 0 0;
+}
+
+
+/**************************/
+
+/**********Words**********/
+
+.wordsList {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.wordsList::-webkit-scrollbar {
+  width: 0;
+}
+
+.word {
+  display: flex;
+}
+
+.wordNumber {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #001f3f;
+  background: #ffffff;
+  font-family: Calibri, sans-serif;
+}
+
+.wordEN, .wordRU {
+  display: block;
+  height: 50px;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+
+.wordEN::first-letter,
+.wordRU::first-letter {
+  text-transform: uppercase;
+}
+
+
+.wordEN {
+  color: #000;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wordRU {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 300;
+}
+
+/*************************/
+
+/**********Working**********/
+
+.practiceBlock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.practiceLevelsBtn {
+  display: block;
+  width: calc(50% - 10px);
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-weight: bold;
+  background: #ffffff;
+  margin: 5px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+}
+
+/* topOfWorkingMenu */
+
+.topOfWorkingMenu {
+  width: 100%;
+  height: 40px;
+  background: #f1f1f1;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nameOfTopic {
+  display: block;
+  width: 70px;
+  height: 40px;
+  color: #000000;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  padding: 0 0 0 5px;
+  box-sizing: border-box;
+}
+
+.nameOfTopic::first-letter {
+  text-transform: uppercase;
+}
+
+.wordCount {
+  display: block;
+  width: 60px;
+  height: 40px;
+  color: #000000;
+  font-size: 20px;
+}
+
+.correctWords {
+  display: block;
+  width: 60px;
+  height: 40px;
+  color: #0074D9;
+  font-size: 16px;
+}
+
+/* **************** */
+
+.incorrectWords {
+  display: block;
+  width: 60px;
+  height: 40px;
+  color: #FF851B;
+  font-size: 16px;
+}
+
+.randomWord {
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 60px;
+  font-weight: 600;
+}
+
+.randomWord::first-letter {
+  text-transform: uppercase;
+}
+
+.buttonsPracticeMenu {
+  width: 300px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 90px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputField {
+  width: 188px;
+  outline: none;
+  border:none;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+}
+
+.checkButton {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  border-radius: 40px;
+}
+
+.checkButton i {
+  font-size: 20px;
+  color:#FF851B;
+}
+
+.prompt {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt i {
+  color: rgba(0,31,63,1);
+  font-size: 20px;
+}
+
+.prompt:hover i {
+  color: rgba(0,31,63,0.5);
+}
+
+/***************************/
