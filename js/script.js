@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let amountOfWords = parseInt(localStorage.getItem('amountOfWords')) || 10;
 let diverseMode =           localStorage.getItem('diverseMode') !== null && localStorage.getItem('diverseMode') == 'true' ? true : false;
@@ -19,10 +20,25 @@ console.log(secondLanguage);
 
 let langEN = localStorage.getItem('language') !== null && localStorage.getItem('language') == 'true' ? true : false;
 let langRU = localStorage.getItem('language') !== null && localStorage.getItem('language') == 'true' ? false : true;
+=======
+let selectTheLanguage = 'en';
+let diverseType = false;
+let amountOfWords = 10;
+
+let theProgramWorks = true;
+let practiceIsWorking = false;
+let loadingIsWorking = false;
+
+let content = document.getElementById('content');
+let n, name, minAmountOfWords, maxAmountOfWords;
+let firstLanguage = selectTheLanguage == 'ru' ? 'wordEN' : 'wordRU';
+let secondLanguage = selectTheLanguage == 'en' ? 'wordEN' : 'wordRU';
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 
 createTopics();
 createMenu();
 function createTopics() {
+<<<<<<< HEAD
   if (topicsIsWorking === true) {
     loadingIsWorking = false;
     practiceAnimation = true;
@@ -146,6 +162,28 @@ function createSettings() {
       mainSettings.remove();
     }
   }
+=======
+  loadingIsWorking = false;
+  content.innerHTML = '';
+  let topicsList = create.createElement({ tagName: 'ul', className: 'topicsList' });
+  for (let i = 0; i < names.length; i++) {
+    let topic = create.createElement(
+      {
+        tagName: 'li',
+        className: 'topic',
+        innerHTML: `${names[i].name} (${words[names[i].nameTopic].length})`
+      },
+      [
+        {
+          name: 'onclick',
+          value: `createLevels('${names[i].nameTopic}')`
+        }
+      ]
+    );
+    topicsList.appendChild(topic);
+  }
+  content.appendChild(topicsList);
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 function createMenu() {
@@ -154,7 +192,11 @@ function createMenu() {
     {
       tagName: 'span',
       className: 'bottomMenuBtn',
+<<<<<<< HEAD
       innerHTML: 'topics'
+=======
+      innerHTML: 'Topics'
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     },
     [
       {
@@ -168,7 +210,11 @@ function createMenu() {
     {
       tagName: 'span',
       className: 'bottomMenuBtn',
+<<<<<<< HEAD
       innerHTML: 'practice'
+=======
+      innerHTML: 'Practice'
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     },
     [
       {
@@ -184,6 +230,7 @@ function createMenu() {
 function createLevels(nameOfTopic) {
   content.innerHTML = '';
   name = nameOfTopic;
+<<<<<<< HEAD
   loadingIsWorking = true;
   topicsIsWorking = true;
   practiceAnimation = true;
@@ -213,11 +260,26 @@ function createLevels(nameOfTopic) {
       {
         tagName: 'li', 
         className: 'level defaultAnimation', 
+=======
+  practiceIsWorking = true;
+  loadingIsWorking = true;
+
+  let amount = Math.floor(words[name].length / amountOfWords);
+  let listOfLevels = create.createElement({tagName: 'ul', className: 'listOfLevels'});
+  let level, i;
+
+  for (i = 0; i < amount; i++) {
+    level = create.createElement(
+      {
+        tagName: 'li', 
+        className: 'level', 
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
         innerHTML: `${i + 1} level`
       },
       [
         {
           name: 'onclick',
+<<<<<<< HEAD
           value: `createWords(${i * amountOfWords}, ${(i * amountOfWords) + amountOfWords}, ${i + 1})`
         }
       ]
@@ -230,44 +292,82 @@ function createLevels(nameOfTopic) {
       {
         tagName: 'li', 
         className: 'level defaultAnimation', 
+=======
+          value: `wordsOfLevel(${i * amountOfWords}, ${(i * amountOfWords) + amountOfWords})`
+        }
+      ]
+    );
+    listOfLevels.appendChild(level);
+  }
+
+  if (words[name].length % amountOfWords !== 0) {
+    level = create.createElement(
+      {
+        tagName: 'li', 
+        className: 'level', 
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
         innerHTML: `${i + 1} level`
       },
       [
         {
           name: 'onclick',
+<<<<<<< HEAD
           value: `createWords(${i * amountOfWords}, ${(i * amountOfWords) + words[name].length - (amount * amountOfWords)}, ${i + 1})`
         }
       ]
     );
     listOfLevels.appendChild(levelElement);
+=======
+          value: `wordsOfLevel(${i * amountOfWords}, ${(i * amountOfWords) + words[name].length - (amount * amountOfWords)})`
+        }
+      ]
+    );
+    listOfLevels.appendChild(level);
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
   }
   content.appendChild(listOfLevels);
 }
 
+<<<<<<< HEAD
 function createWords(min, max, lvl) {
   content.innerHTML = '';
   practiceIsWorking = true;
+=======
+function wordsOfLevel(min, max) {
+  content.innerHTML = '';
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
   let wordsList = create.createElement({ tagName: 'ul', className: 'wordsList' });
   minAmountOfWords = min;
   maxAmountOfWords = max;
 
   loadingWords();
   function loadingWords() {
+<<<<<<< HEAD
     level = lvl;
     if (loadingIsWorking === true && loadingWordsIsWorking === true){
+=======
+    if (loadingIsWorking === true){
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
       for (let i = min; i < max; i++) {
         let word = create.createElement(
           {
             tagName: 'li',
+<<<<<<< HEAD
             className: 'word defaultAnimation',
+=======
+            className: 'word',
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
             innerHTML: "<span class='wordNumber'>" + (i + 1) + "</span>" + "<span class='wordEN'>" + words[name][i].wordEN + "</span>" + "<span class='wordRU'>" + words[name][i].wordRU + "</span>"
           }
         );
         wordsList.appendChild(word);
       }
       content.appendChild(wordsList);
+<<<<<<< HEAD
     } else {
       working();
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     }
   }
 }
@@ -275,12 +375,16 @@ function createWords(min, max, lvl) {
 function working() {
   if (practiceIsWorking === true) {
     content.innerHTML = '';
+<<<<<<< HEAD
     topicsIsWorking = true;
     practiceIsWorking = false;
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 
     let topOfWorkingMenu =    create.createElement({tagName: 'div',     className: 'topOfWorkingMenu'});
     let correctWords =        create.createElement({tagName: 'span',    className: 'correctWords',    innerHTML: 0});
     let wordCount =           create.createElement({tagName: 'span',    className: 'wordCount'});
+<<<<<<< HEAD
     let nameOfTopic =         create.createElement({tagName: 'span',    className: 'nameOfTopic',     innerHTML: `${name}`});
     let incorrectWords =      create.createElement({tagName: 'span',    className: 'incorrectWords',  innerHTML: 0});
     let randomWord =          create.createElement({tagName: 'span',    className: 'randomWord'});
@@ -290,11 +394,25 @@ function working() {
     let buttonsPracticeMenu = create.createElement({tagName: 'div',     className: 'buttonsPracticeMenu'});
     let practiceBlock =       create.createElement({tagName: 'div',     className: 'practiceBlock'});
     let levelMenu =           create.createElement({tagName: 'span',    className: 'thisLevel',       innerHTML: `${level === 'All words' ?  level : level + ' lvl'}`});
+=======
+    let nameOfTopic =         create.createElement({tagName: 'span',    className: 'nameOfTopic', innerHTML: `${name}`});
+    let incorrectWords =      create.createElement({tagName: 'span',    className: 'incorrectWords',  innerHTML: 0});
+    let randomWord =          create.createElement({tagName: 'span',    className: 'randomWord'});
+    let inputField =          create.createElement({tagName: 'input',   className: 'inputField'});
+    let checkButton =         create.createElement({tagName: 'button',  className: 'checkButton',     innerHTML: '<i class="fas fa-check"></i>'});
+    let prompt =              create.createElement({tagName: 'span',    className: 'prompt',             innerHTML: '<i class="fas fa-eye"></i>'});
+    let buttonsPracticeMenu = create.createElement({tagName: 'div',     className: 'buttonsPracticeMenu'});
+    let practiceBlock =       create.createElement({tagName: 'div',     className: 'practiceBlock'});
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     let btnLevel = create.createElement(
       {
         tagName: 'span',
         className: 'practiceLevelsBtn',
+<<<<<<< HEAD
         innerHTML: 'levels'
+=======
+        innerHTML: 'Levels'
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
       },
       [
         {
@@ -303,10 +421,13 @@ function working() {
         }
       ]
     );
+<<<<<<< HEAD
     
     if (practiceAnimation === true) {
       practiceBlock.classList.add('defaultAnimation');
     } 
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 
       practiceBlock.appendChild(btnLevel);
       practiceBlock.appendChild(topOfWorkingMenu);
@@ -314,13 +435,22 @@ function working() {
         topOfWorkingMenu.appendChild(correctWords);
         topOfWorkingMenu.appendChild(wordCount);
         topOfWorkingMenu.appendChild(incorrectWords);
+<<<<<<< HEAD
         topOfWorkingMenu.appendChild(levelMenu);
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
       practiceBlock.appendChild(randomWord);
       practiceBlock.appendChild(buttonsPracticeMenu);
         buttonsPracticeMenu.appendChild(prompt);
         buttonsPracticeMenu.appendChild(inputField);
+<<<<<<< HEAD
     content.appendChild(practiceBlock);
     
+=======
+        buttonsPracticeMenu.appendChild(checkButton);
+    content.appendChild(practiceBlock);
+
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     let i;
     let ArrayNumbersOfWords = [];
     let stateProgramme = theProgramWorks;
@@ -328,6 +458,23 @@ function working() {
 
     inputField.focus();
 
+<<<<<<< HEAD
+=======
+    checkButton.onclick = mainWordCheck;
+
+    document.addEventListener('keyup', function (event) {
+      if (event.code == 'Enter') {
+        mainWordCheck();
+      }
+    });
+
+    document.addEventListener('keyup', function (event) {
+      if (event.keyCode == 73 && event.ctrlKey) { 
+        promptWord();
+      }
+    });
+
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     AddNumbers();
     function AddNumbers() {
       for (let j = minAmountOfWords; j < maxAmountOfWords; j++) {
@@ -342,7 +489,11 @@ function working() {
       let index = Math.floor(Math.random() * max);
       i = ArrayNumbersOfWords[index];
 
+<<<<<<< HEAD
       if (diverseMode == true){
+=======
+      if (diverseType == true){
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
         if(index % 2 === 0){
           firstLanguage = 'wordRU';
           secondLanguage = 'wordEN';
@@ -353,6 +504,7 @@ function working() {
       }  
 
       if (ArrayNumbersOfWords.length == 0) {
+<<<<<<< HEAD
         if (infiniteWords === false || incorrectWords.innerHTML == 0) {
           stateProgramme = !stateProgramme;
           wordCount.innerHTML = 0;
@@ -361,6 +513,13 @@ function working() {
         } else {
           AddNumbers(); 
         }
+=======
+        stateProgramme = !stateProgramme;
+        wordCount.innerHTML = 0;
+        randomWord.innerHTML = "That's all words.";
+        inputField.blur();
+        // AddNumbers();
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
       } else {
         wordCount.innerHTML = ArrayNumbersOfWords.length;
         randomWord.innerHTML = words[name][i][firstLanguage];
@@ -374,6 +533,7 @@ function working() {
       } else {
         correctWords.innerHTML++;
       }
+<<<<<<< HEAD
       if (levelMenu.innerHTML !== 'All words') {
         if (words[name].length - (level * amountOfWords) !== 0) {
           nextLevel();
@@ -406,10 +566,13 @@ function working() {
         );
         practiceBlock.appendChild(nextLevelBtn);
       }
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     }
 
     function mainWordCheck() {
       if (stateProgramme == true) {
+<<<<<<< HEAD
         practiceAnimation = false;
         practiceIsWorking = true;
         practiceBlock.classList.remove('defaultAnimation');
@@ -456,6 +619,49 @@ function working() {
           }
           inputField.placeholder = '';
         }
+=======
+        if (words[name][i].otherTranslations != undefined) {
+          if (words[name][i].hasOwnProperty('otherTranslations') === true) {
+            if (randomWord.innerHTML == words[name][i][firstLanguage] && inputField.value.toLowerCase() == words[name][i][secondLanguage]) {
+              // trueWord();
+              inputField.value = '';
+              inputField.focus();
+              checkingWordsForCorrectness();
+              newWord();
+            } else {
+              let j = 0;
+              while (j < words[name][i].otherTranslations.length) {
+                if (randomWord.innerHTML == words[name][i][firstLanguage] && inputField.value.toLowerCase() == words[name][i].otherTranslations[j]) {
+                  // trueWord();
+                  inputField.value = '';
+                  inputField.focus();
+                  checkingWordsForCorrectness();
+                  newWord();
+                  break;
+                } else {
+                  j++;
+                  inputField.focus();
+                }
+                // falseWord();
+              }
+            }
+          }
+        } else if (words[name][i].otherTranslations == undefined) {
+          if (words[name][i].hasOwnProperty('otherTranslations') === false) {
+            if (randomWord.innerHTML == words[name][i][firstLanguage] && inputField.value.toLowerCase() == words[name][i][secondLanguage]) {
+              // trueWord();
+              inputField.value = '';
+              inputField.focus();
+              checkingWordsForCorrectness();
+              newWord();
+            } else {
+              // falseWord();
+              inputField.focus();
+            }
+          }
+        }
+        inputField.placeholder = '';
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
       }
     };
 
@@ -464,7 +670,10 @@ function working() {
     function promptWord() {
       if (stateProgramme == true) {
         inputField.placeholder = words[name][i][secondLanguage];
+<<<<<<< HEAD
         inputField.focus();
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
         promptIsActive = true;
       }
     };
@@ -486,6 +695,7 @@ function working() {
 // }
 
 
+<<<<<<< HEAD
 // document.getElementById('content').onscroll = function () {
 //  if (n !== words[name].length) {
 //    windowScroll = document.getElementById('content').scrollTop;
@@ -495,3 +705,14 @@ function working() {
 //    }
 //  }
 //};
+=======
+//   document.getElementById('content').onscroll = function () {
+//     if (n !== words[name].length) {
+//       windowScroll = document.getElementById('content').scrollTop;
+//       documentHeight = document.getElementById('content').scrollHeight - document.getElementById('content').clientHeight;
+//       if (documentHeight - windowScroll <= 300) {
+//         loadingWords();
+//       }
+//     }
+//   };
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7

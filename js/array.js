@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 let names = [
   { id: '', nameTopic: 'pronouns',        name: 'pronouns' },
   { id: '', nameTopic: 'adverb',          name: 'adverb' },
   { id: '', nameTopic: 'adjective',       name: 'adjective' },
+<<<<<<< HEAD
   { id: '', nameTopic: 'WFC',             name: 'words for conversition' },
+=======
+  { id: '', nameTopic: 'WFS',  name: 'words for speech' },
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
   { id: '', nameTopic: 'verbs',           name: 'verbs' },
   { id: '', nameTopic: 'otherWords',      name: 'other word' }
 ];
@@ -91,7 +99,11 @@ let words = {
     { wordEN: "alive",            wordRU: "живой" },
     { wordEN: "ancient",          wordRU: "древний" },
     { wordEN: "annual",           wordRU: "ежегодный" },
+<<<<<<< HEAD
     { wordEN: "appropriate",      wordRU: "соответствующий" },
+=======
+    { wordEN: "appropirate",      wordRU: "соответствующий" },
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     { wordEN: "ashamed",          wordRU: "пристыженный, стыдиться" },
     { wordEN: "asleep",           wordRU: "спящий" },
     { wordEN: "attractive",       wordRU: "привлекательный" },
@@ -168,7 +180,11 @@ let words = {
     { wordEN: "military",         wordRU: "военный" },
     { wordEN: "missing",          wordRU: "отсутствующий" },
     { wordEN: "modern",           wordRU: "современный" },
+<<<<<<< HEAD
     { wordEN: "modest",           wordRU: "скромный" },
+=======
+    { wordEN: "modest",           wordRU: "скоромный" },
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     { wordEN: "native",           wordRU: "родной" },
     { wordEN: "negative",         wordRU: "отрицательный" },
     { wordEN: "normal",           wordRU: "нормальный" },
@@ -176,7 +192,11 @@ let words = {
     { wordEN: "obvious",          wordRU: "очевидный" },
     { wordEN: "ordinary",         wordRU: "обычный" },
     { wordEN: "pale",             wordRU: "бледный" },
+<<<<<<< HEAD
     { wordEN: "particular",       wordRU: "особый" },
+=======
+    { wordEN: "particalar",       wordRU: "особый" },
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     { wordEN: "perfect",          wordRU: "совершенный" },
     { wordEN: "personal",         wordRU: "личный" },
     { wordEN: "physical",         wordRU: "физический" },
@@ -189,8 +209,13 @@ let words = {
     { wordEN: "powerful",         wordRU: "мощный" },
     { wordEN: "previous",         wordRU: "предыдущий" },
     { wordEN: "prime",            wordRU: "первый" },
+<<<<<<< HEAD
     { wordEN: "professional",     wordRU: "профессиональный" },
     { wordEN: "proper",           wordRU: "правильный" },
+=======
+    { wordEN: "prefessional",     wordRU: "профессиональный" },
+    { wordEN: "proper",           wordRU: "proper" },
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     { wordEN: "proud",            wordRU: "гордый" },
     { wordEN: "pure",             wordRU: "чистый" },
     { wordEN: "purple",           wordRU: "пурпурный" },
@@ -244,7 +269,11 @@ let words = {
     { wordEN: "worth",            wordRU: "стоящий" },
     { wordEN: "worst",            wordRU: "самый плохой" }
   ],
+<<<<<<< HEAD
   'WFC': [
+=======
+  'WFS': [
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     { wordEN: "abroad",           wordRU: "за границей" },
     { wordEN: "afterward",        wordRU: "позже" },
     { wordEN: "anywhere",         wordRU: "где-нибудь" },

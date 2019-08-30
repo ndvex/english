@@ -10,6 +10,7 @@ class Create {
     if ('innerHTML' in options) {
       elem.innerHTML = options.innerHTML;
     }
+<<<<<<< HEAD
     if ('value' in options) {
       elem.value = options.value;
     }
@@ -27,6 +28,8 @@ class Create {
       }
       
     }
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
     
     if (attributes !== undefined){
       for (let i = 0; i < attributes.length; i++){

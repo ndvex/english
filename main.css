@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 :root {
   --timeOfAnimation: 1s;
 }
 
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +23,7 @@ body {
 
 #content {
   width: 100%;
+<<<<<<< HEAD
   height: calc(100vh - 52px);
   padding: 5px;
   box-sizing: border-box;
@@ -142,6 +146,10 @@ body {
 }
 
 /**************************/
+=======
+  height: calc(100vh - 52px); 
+}
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 /**********bottomMenu**********/
 
 #bottomMenu {
@@ -170,6 +178,14 @@ body {
   height: 100%;
   padding: 25px 25px;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  overflow-y: auto;
+}
+
+.topicsList::-webkit-scrollbar {
+  width: 0;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 .topic {
@@ -188,8 +204,14 @@ body {
 }
 
 .topic:last-child {
+<<<<<<< HEAD
   margin: 10px 0 25px 0;
 }
+=======
+  margin: 10px 0 0 0;
+}
+
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 /**************************/
 
 /**********Levels**********/
@@ -198,6 +220,14 @@ body {
   height: 100%;
   padding: 25px 25px;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  overflow-y: auto;
+}
+
+.listOfLevels::-webkit-scrollbar {
+  width: 0;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 .level {
@@ -216,7 +246,11 @@ body {
 }
 
 .level:last-child {
+<<<<<<< HEAD
   margin: 10px 0 25px 0;
+=======
+  margin: 10px 0 0 0;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 
@@ -228,7 +262,15 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+  overflow-y: auto;
+}
+
+.wordsList::-webkit-scrollbar {
+  width: 0;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 .word {
@@ -294,29 +336,45 @@ body {
   position: relative;
 }
 
+<<<<<<< HEAD
 .practiceLevelsBtn, .practiceNextLevelBtn {
   display: block;
   width: calc(50% - 5px);
+=======
+.practiceLevelsBtn {
+  display: block;
+  width: calc(50% - 10px);
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
   height: 42px;
   text-align: center;
   line-height: 42px;
   font-weight: bold;
   background: #ffffff;
+<<<<<<< HEAD
   border-radius: 10px;
   position: absolute;
   z-index: 1;
 }
 
 .practiceLevelsBtn {
+=======
+  margin: 5px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
   left: 0;
   bottom: 0;
 }
 
+<<<<<<< HEAD
 .practiceNextLevelBtn {
   right: 0;
   bottom: 0;
 }
 
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 /* topOfWorkingMenu */
 
 .topOfWorkingMenu {
@@ -348,6 +406,7 @@ body {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .thisLevel {
   display: block;
   width: 70px;
@@ -360,6 +419,8 @@ body {
   box-sizing: border-box;
 }
 
+=======
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 .wordCount {
   display: block;
   width: 60px;
@@ -425,7 +486,24 @@ body {
   text-align: center;
   background: #ffffff;
   color: #000000;
+<<<<<<< HEAD
   margin-right: 50px;
+=======
+}
+
+.checkButton {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  border-radius: 40px;
+}
+
+.checkButton i {
+  font-size: 20px;
+  color:#FF851B;
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 }
 
 .prompt {
@@ -439,8 +517,20 @@ body {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .prompt img {
   width: 25px;
   height: auto;
 }
+=======
+.prompt i {
+  color: rgba(0,31,63,1);
+  font-size: 20px;
+}
+
+.prompt:hover i {
+  color: rgba(0,31,63,0.5);
+}
+
+>>>>>>> 9047a17277668132e52e204f25d78884ca4810c7
 /***************************/
